@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras de Cursos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .course {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .course:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .course h3 {
+            margin: 0;
+        }
+        .course p {
+            margin: 5px 0;
+        }
+        .course button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .course button:hover {
+            background-color: #218838;
+        }
+        .description {
+            margin: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+        }
+        .course.active .details {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleDetails(course) {
+            course.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <nav class="menuminerva">
+        <ul>
+        <li ><img src="logom.png" alt="" height="100" width="100" ></li>
+        <li><a href="compras.html"><h3>compras</h3> </a></li>       
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="menu.html">Cursos</a></li>
+          <li><a href="quien.html">Quienes somos?</a></li>
+          <li><a href="perfil.html">Mi perfil</a></li>
+          <li><a href="notificaciones.html">Notificaciones</a></li>
+          
+          <li><a href="ayuda.html">Ayuda </a></li>
+
+
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="course" onclick="toggleDetails(this)">
+            <div>
+                <h3>Curso de Programación</h3>
+                <p class="price">Precio: $49.99</p>
+                <div class="details">
+                    <p class="description">Aprende a programar desde cero con este curso completo que cubre varios lenguajes de programación.</p>
+                    <p>Duración: 40 horas</p>
+                    <p>Nivel: Principiante</p>
+                </div>
+            </div>
+            <button>Comprar</button>
+        </div>
+        <div class="course" onclick="toggleDetails(this)">
+            <div>
+                <h3>Curso de Diseño Gráfico</h3>
+                <p class="price">Precio: $39.99</p>
+                <div class="details">
+                    <p class="description">Domina las herramientas de diseño gráfico y desarrolla tu creatividad.</p>
+                    <p>Duración: 30 horas</p>
+                    <p>Nivel: Intermedio</p>
+                </div>
+            </div>
+            <button>Comprar</button>
+        </div>
+        <div class="course" onclick="toggleDetails(this)">
+            <div>
+                <h3>Curso de Marketing Digital</h3>
+                <p class="price">Precio: $59.99</p>
+                <div class="details">
+                    <p class="description">Conviértete en un experto en marketing digital y aprende las estrategias más efectivas.</p>
+                    <p>Duración: 50 horas</p>
+                    <p>Nivel: Avanzado</p>
+                </div>
+            </div>
+            <button>Comprar</button>
+        </div>
+        <!-- Añade más cursos según sea necesario -->
+    </div>
+</body>
+</html>

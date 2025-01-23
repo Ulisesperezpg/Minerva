@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Preguntas Frecuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .faq, .help {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .faq h2, .help h2 {
+            margin-top: 0;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-item h3 {
+            margin: 0;
+            cursor: pointer;
+        }
+        .faq-item p {
+            display: none;
+        }
+        .chat {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chat-window {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .chat-input {
+            display: flex;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+        .chat-input button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0 5px 5px 0;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleFaq(faqItem) {
+            const answer = faqItem.querySelector('p');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function addMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (message) {
+                const chatWindow = document.getElementById('chatWindow');
+                const newMessage = document.createElement('div');
+                newMessage.textContent = message;
+                chatWindow.appendChild(newMessage);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+                input.value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="menuminerva">
+        <ul>
+        <li ><img src="logom.png" alt="" height="100" width="100" ></li>
+        <li><a href="ayuda.html"><h3>Ayuda</h3> </a></li>       
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="menu.html">Cursos</a></li>
+          <li><a href="quien.html">Quienes somos?</a></li>
+          <li><a href="perfil.html">Mi perfil</a></li>
+          <li><a href="notificaciones.html">Notificaciones</a></li>
+          <li><a href="compras.html">compras </a></li>
+        
+
+
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h3>¿Cómo puedo registrarme?</h3>
+                <p>Para registrarte, haz clic en el botón "Registrarse" en la esquina superior derecha y sigue las instrucciones.</p>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <h3>¿Cómo puedo restablecer mi contraseña?</h3>
+                <p>Puedes restablecer tu contraseña haciendo clic en "Olvidé mi contraseña" en la página de inicio de sesión.</p>
+            </div>
+            <!-- Añade más preguntas frecuentes según sea necesario -->
+        </div>
+        <div class="help">
+            <h2>Solicitar Ayuda</h2>
+            <p>Si necesitas ayuda adicional, por favor completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="issue">Descripción del Problema:</label><br>
+                <textarea id="issue" name="issue" rows="4" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="chat">
+            <h2>Chat Interactivo</h2>
+            <div id="chatWindow" class="chat-window"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                <button onclick="addMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
