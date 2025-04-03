@@ -35,36 +35,44 @@
             height: 150px;
             object-fit: cover;
         }
-        .profile h3, .profile h5 {
-            margin-top: 10px;
+        .details, .activity-history, .skills, .badges, .settings {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-        .details {
-            text-align: left;
+        h4 {
             margin-top: 20px;
+            color: #333;
         }
-        .details h4 {
-            margin-bottom: 10px;
+        ul {
+            list-style-type: square;
         }
-        .details p {
-            margin: 5px 0;
+        button {
+            padding: 10px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <nav class="menuminerva">
         <ul>
-        <li ><img src="logom.png" alt="" height="100" width="100" ></li>
-        <li><a href="perfil.html"><h3>Mi perfil</h3></a></li>       
-          <li><a href="categorias.html">Categorias</a></li>
-          <li><a href="menu.html">Cursos</a></li>
-          <li><a href="quien.html">Quienes somos?</a></li>
          
-          <li><a href="notificaciones.html">Notificaciones</a></li>
-          <li><a href="compras.html">compras </a></li>
-          <li><a href="ayuda.html">Ayuda </a></li>
-
-
-            
+            <li><a href="perfil.html"><h3>Mi perfil</h3></a></li>       
+            <li><a href="categorias.html">Categorías</a></li>
+            <li><a href="menu.html">Cursos</a></li>
+            <li><a href="quien.html">¿Quiénes somos?</a></li>
+            <li><a href="notificaciones.html">Notificaciones</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -73,22 +81,51 @@
             <h3>Nombre del Usuario</h3>
             <h5>Correo: usuario@ejemplo.com</h5>
             <h5>Teléfono: (55) 12345678</h5>
-            <p>Descripción breve del usuario. Aquí puedes escribir una pequeña biografía o cualquier otra información relevante.</p>
+            <p>Descripción breve del usuario.</p>
+            <button onclick="editarPerfil()">Editar Perfil</button>
         </div>
+
         <div class="details">
             <h4>Sobre mí</h4>
-            <p>Aquí puedes agregar una descripción más detallada sobre el usuario, incluyendo intereses personales, hobbies y más.</p>
-            <h4>Experiencia Profesional</h4>
-            <p>Lista de trabajos anteriores y actuales, con descripciones breves de las responsabilidades y logros.</p>
-            <h4>Educación</h4>
-            <p>Detalles sobre la formación académica del usuario, incluyendo universidades, títulos obtenidos y fechas de graduación.</p>
+            <p>Descripción detallada sobre el usuario.</p>
+        </div>
+
+        <div class="activity-history">
+            <h4>Historial de Actividades</h4>
+            <ul>
+                <li>Curso completado: Desarrollo Web (04/2025)</li>
+                <li>Actualización de perfil: Nueva descripción (03/2025)</li>
+                <li>Proyecto agregado: App móvil (02/2025)</li>
+            </ul>
+        </div>
+
+        <div class="skills">
             <h4>Habilidades</h4>
-            <p>Lista de habilidades y competencias del usuario, tanto técnicas como interpersonales.</p>
-            <h4>Proyectos</h4>
-            <p>Descripción de proyectos en los que el usuario ha trabajado, destacando su papel y los resultados obtenidos.</p>
-            <h4>Contacto</h4>
-            <p>Información adicional de contacto o enlaces a perfiles profesionales como LinkedIn.</p>
+            <p>HTML, CSS, JavaScript, Python</p>
+        </div>
+
+        <div class="badges">
+            <h4>Insignias</h4>
+            <ul>
+                <li>Desarrollador Novato</li>
+                <li>Curso Completo: Fundamentos de Programación</li>
+            </ul>
+        </div>
+
+        <div class="settings">
+            <h4>Configuración</h4>
+            <button onclick="ajustarPreferencias()">Cambiar Preferencias</button>
         </div>
     </div>
+
+    <script>
+        function editarPerfil() {
+            alert("Función de edición en desarrollo.");
+        }
+
+        function ajustarPreferencias() {
+            alert("Ajustes de configuración en desarrollo.");
+        }
+    </script>
 </body>
 </html>
