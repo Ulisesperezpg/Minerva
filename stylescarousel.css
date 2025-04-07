@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 200;
+    background-color: #f5f5f5; /* Fondo dorado claro */
+    color: #040404; /* Texto dorado oscuro */
+}
+.header {
+    text-align: center;
+    
+    color: #010101;
+}   
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px;
+}
+.carousel, .small-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: #ffd700; /* Dorado vibrante */
+    border-radius: 10px;
+    scroll-behavior: smooth;
+}
+.carousel img {
+    width: 100%;
+    max-width: 300px;
+    border: 3px solid #b8860b; /* Borde dorado oscuro */
+    border-radius: 10px;
+}
+.small-carousel img {
+    width: 100%;
+    max-width: 150px;
+    border: 2px solid #daa520; /* Borde oro */
+    border-radius: 10px;
+}
+button {
+    background-color: #b8860b; /* Dorado oscuro */
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #daa520; /* Oro más claro */
+}
+
+

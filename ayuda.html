@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="logo.png" width="90" height="90" ></i> Minerva
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="categorias.html" class="nav__link">Categoria</a></li>
+
+                  <li><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="menudecompras.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Menu de Compras
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="transacciones.html" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Transacciones
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas </i></a>
+                           </div>
+
+                           
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="miperfil.html" class="dropdown__link">
+                              <i class="ri-user-line"></i> Mi perfil
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="micuenta.html" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Mi cuenta
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="mensages.html" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Mensages
+                           </a>
+                        </li>
+                        
+                        <li>
+                           <a href="configuraciones.html" class="dropdown__link">
+                              <i class="ri-tools-line"></i> Configuraciones
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ayuda y Soporte</title>
+      <link rel="stylesheet" href="stylesayuda.css">
+  </head>
+  <body>
+   
+      <main>
+          <section class="faq">
+              <h2>Preguntas Frecuentes (FAQ)</h2>
+              <div class="question">
+                  <h3>¿Cómo puedo contactar al soporte técnico?</h3>
+                  <p>Puedes contactarnos a través del formulario de contacto o llamando al número de atención al cliente.</p>
+              </div>
+              <div class="question">
+                  <h3>¿Dónde puedo encontrar mi factura?</h3>
+                  <p>Las facturas están disponibles en la sección "Mi Cuenta" después de iniciar sesión.</p>
+              </div>
+          </section>
+  
+          <section class="contact">
+              <h2>Contáctanos</h2>
+              <form>
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" name="name" required>
+  
+                  <label for="email">Correo Electrónico:</label>
+                  <input type="email" id="email" name="email" required>
+  
+                  <label for="message">Mensaje:</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+  
+                  <button type="submit">Enviar</button>
+              </form>
+          </section>
+  
+          <section class="alerts">
+              <h2>Alertas Importantes</h2>
+              <div class="alert">
+                  <p><strong>Mantenimiento Programado:</strong> El sistema estará en mantenimiento el próximo domingo de 2:00 a.m. a 6:00 a.m.</p>
+              </div>
+          </section>
+      </main>
+   </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="logo.png" width="90" height="90" ></i> Minerva
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="categorias.html" class="nav__link">Categoria</a></li>
+
+                  <li><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="menudecompras.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Menu de Compras
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="transacciones.html" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Transacciones
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas </i></a>
+                           </div>
+
+                           
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="miperfil.html" class="dropdown__link">
+                              <i class="ri-user-line"></i> Mi perfil
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="micuenta.html" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Mi cuenta
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="mensages.html" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Mensages
+                           </a>
+                        </li>
+                        
+                        <li>
+                           <a href="configuraciones.html" class="dropdown__link">
+                              <i class="ri-tools-line"></i> Configuraciones
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+
+
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones y Alertas</title>
+    <link rel="stylesheet" href="stylesnotificaciones.css">
+</head>
+<body>
+ 
+    <main>
+        <section class="notifications">
+            <h2>Notificaciones</h2>
+            <div class="notification">
+                <p><strong>Nueva Tarea:</strong> Completar el informe semanal.</p>
+                <button>Cerrar</button>
+            </div>
+            <div class="notification">
+                <p><strong>Actualización:</strong> Tu perfil se actualizó correctamente.</p>
+                <button>Cerrar</button>
+            </div>
+            <div class="notification">
+               <p><strong>Actualización:</strong> Tu perfil se actualizó correctamente.</p>
+               <button>Cerrar</button>
+           </div>
+           <div class="notification">
+            <p><strong>Actualización:</strong> Tu perfil se actualizó correctamente.</p>
+            <button>Cerrar</button>
+        </div>
+        <div class="notification">
+         <p><strong>Actualización:</strong> Tu perfil se actualizó correctamente.</p>
+         <button>Cerrar</button>
+     </div>
+      
+        </section>
+
+        <section class="messages">
+            <h2>Mensajes</h2>
+            <div class="message">
+                <p><strong>De María:</strong> ¿A qué hora es la reunión?</p>
+                <button>Responder</button>
+            </div>
+            <div class="message">
+                <p><strong>De Juan:</strong> ¡Gracias por la ayuda con el proyecto!</p>
+                <button>Responder</button>
+            </div>
+        </section>
+
+        <section class="alerts">
+            <h2>Alertas</h2>
+            <div class="alert warning">
+                <p><strong>Advertencia:</strong> Espacio en disco casi lleno.</p>
+                <button>Ignorar</button>
+            </div>
+            <div class="alert error">
+                <p><strong>Error:</strong> No se pudo conectar con el servidor.</p>
+                <button>Reintentar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+   </body>
+</html>

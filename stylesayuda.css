@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #cdad00; /* Dorado */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header h1 {
+    color: #cdad00;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+main {
+    padding: 100px;
+}
+
+section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #cdad00;
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: left;
+    border-bottom: 2px solid #cdad00;
+    padding-bottom: 5px;
+}
+
+.question, .alert {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.question h3, .alert strong {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cdad00;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #cdad00;
+}
+
+button {
+    background-color: #cdad00;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b69300;
+}

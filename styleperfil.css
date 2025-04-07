@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #cdad00; /* Dorado */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header h1 {
+    color: #cdad00;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+main {
+    padding: 80px;
+    text-align: left;
+}
+
+section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #cdad00;
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #cdad00;
+    padding-bottom: 5px;
+}
+
+p, li {
+    color: #cdad00;
+   
+}
+
+form label {
+    color: #cdad00;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="file"], button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cdad00;
+    background-color: #1a1a1a;
+    color: #cdad00;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #cdad00;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b69300;
+}

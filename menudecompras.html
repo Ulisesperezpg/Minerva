@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="logo.png" width="90" height="90" ></i> Minerva
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="categorias.html" class="nav__link">Categoria</a></li>
+
+                  <li><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="menudecompras.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Menu de Compras
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="transacciones.html" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Transacciones
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas </i></a>
+                           </div>
+
+                           
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="miperfil.html" class="dropdown__link">
+                              <i class="ri-user-line"></i> Mi perfil
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="micuenta.html" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Mi cuenta
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="mensages.html" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Mensages
+                           </a>
+                        </li>
+                        
+                        <li>
+                           <a href="configuraciones.html" class="dropdown__link">
+                              <i class="ri-tools-line"></i> Configuraciones
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Compra de Cursos</title>
+      <link rel="stylesheet" href="stylecompras.css">
+  </head>
+  <body>
+   
+      <main>
+          <div class="course">
+              <h2>Curso de Programación</h2>
+              <p>Aprende los fundamentos de programación.</p>
+              <p class="price">$100 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Diseño Web</h2>
+              <p>Crea páginas web impresionantes.</p>
+              <p class="price">$120 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Marketing Digital</h2>
+              <p>Domina estrategias digitales efectivas.</p>
+              <p class="price">$90 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Fotografía</h2>
+              <p>Captura momentos únicos con tu cámara.</p>
+              <p class="price">$80 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Idiomas</h2>
+              <p>Aprende un nuevo idioma rápidamente.</p>
+              <p class="price">$70 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Cocina</h2>
+              <p>Conviértete en un chef profesional.</p>
+              <p class="price">$60 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Liderazgo</h2>
+              <p>Desarrolla habilidades de liderazgo.</p>
+              <p class="price">$150 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Finanzas Personales</h2>
+              <p>Administra tu dinero de manera eficiente.</p>
+              <p class="price">$110 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Desarrollo de Apps</h2>
+              <p>Crea aplicaciones móviles increíbles.</p>
+              <p class="price">$140 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Yoga</h2>
+              <p>Encuentra tu paz interior con yoga.</p>
+              <p class="price">$50 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Escritura Creativa</h2>
+              <p>Domina el arte de contar historias.</p>
+              <p class="price">$130 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Diseño Gráfico</h2>
+              <p>Explora tu creatividad con herramientas digitales.</p>
+              <p class="price">$90 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Inteligencia Artificial</h2>
+              <p>Explora el futuro de la tecnología.</p>
+              <p class="price">$200 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Negocios</h2>
+              <p>Emprende y gestiona negocios exitosos.</p>
+              <p class="price">$170 USD</p>
+              <button>Comprar</button>
+          </div>
+          <div class="course">
+              <h2>Curso de Gestión de Proyectos</h2>
+              <p>Mejora tus habilidades en planificación.</p>
+              <p class="price">$160 USD</p>
+              <button>Comprar</button>
+          </div>
+      </main>  
+   
+    
+   </body>
+</html>

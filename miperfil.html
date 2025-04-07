@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img src="logo.png" width="90" height="90" ></i> Minerva
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="categorias.html" class="nav__link">Categoria</a></li>
+
+                  <li><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="menudecompras.html" class="dropdown__link">
+                              <i class="ri-pie-chart-line"></i> Menu de Compras
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="transacciones.html" class="dropdown__link">
+                              <i class="ri-arrow-up-down-line"></i> Transacciones
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas </i></a>
+                           </div>
+
+                           
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="miperfil.html" class="dropdown__link">
+                              <i class="ri-user-line"></i> Mi perfil
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="micuenta.html" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Mi cuenta
+                           </a>  
+                        </li>
+
+                        <li>
+                           <a href="mensages.html" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Mensages
+                           </a>
+                        </li>
+                        
+                        <li>
+                           <a href="configuraciones.html" class="dropdown__link">
+                              <i class="ri-tools-line"></i> Configuraciones
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+    <link rel="stylesheet" href="styleperfil.css">
+</head>
+<body>
+    
+    <main>
+        <section class="personal-info">
+            <h2>Información Personal</h2>
+            <p><strong>Nombre:</strong> Ana López</p>
+            <p><strong>Correo Electrónico:</strong> ana.lopez@email.com</p>
+            <p><strong>Teléfono:</strong> +52 987 654 3210</p>
+            <p><strong>Dirección:</strong> Ciudad de México, México</p>
+        </section>
+
+        <section class="academic-history">
+            <h2>Historial Académico</h2>
+            <div class="academic-entry">
+                <h3>Licenciatura en Ciencias de la Computación</h3>
+                <p><strong>Institución:</strong> Universidad Nacional Autónoma de México (UNAM)</p>
+                <p><strong>Año de graduación:</strong> 2020</p>
+            </div>
+            <div class="academic-entry">
+                <h3>Maestría en Inteligencia Artificial</h3>
+                <p><strong>Institución:</strong> Instituto Tecnológico de Monterrey</p>
+                <p><strong>Año de graduación:</strong> 2023</p>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <h2>Logros y Reconocimientos</h2>
+            <ul>
+                <li>Premio a la Excelencia Académica en la UNAM (2020).</li>
+                <li>Certificado de Honor en Proyectos de Innovación Tecnológica (2023).</li>
+                <li>Publicación de artículos en revistas científicas sobre IA.</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Programación en Python, Java y C++.</li>
+                <li>Desarrollo de modelos de Machine Learning.</li>
+                <li>Análisis de Big Data.</li>
+                <li>Gestión de proyectos tecnológicos.</li>
+            </ul>
+        </section>
+
+        <section class="certifications">
+            <h2>Certificaciones</h2>
+            <div class="certification-entry">
+                <p><strong>Certificado:</strong> Machine Learning Specialist</p>
+                <p><strong>Emitido por:</strong> Google</p>
+                <p><strong>Año:</strong> 2022</p>
+            </div>
+            <div class="certification-entry">
+                <p><strong>Certificado:</strong> Data Science Professional</p>
+                <p><strong>Emitido por:</strong> IBM</p>
+                <p><strong>Año:</strong> 2021</p>
+            </div>
+        </section>
+
+        <section class="research">
+            <h2>Investigación</h2>
+            <p><strong>Título del Proyecto:</strong> Implementación de Redes Neuronales en Sistemas de Diagnóstico Médico</p>
+            <p><strong>Descripción:</strong> Investigación enfocada en el uso de algoritmos de aprendizaje profundo para mejorar la detección temprana de enfermedades.</p>
+        </section>
+
+        <section class="photo-upload">
+            <h2>Foto de Perfil</h2>
+            <form>
+                <label for="photo">Subir una foto:</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <button type="submit">Guardar Foto</button>
+            </form>
+        </section>
+    </main>
+   </body>
+</html>
