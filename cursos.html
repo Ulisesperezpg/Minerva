@@ -1,274 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minerva - Cursos en Línea</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minerva - Cursos en Línea</title>
 
-    <!--=============== REMIXICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Remixicons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-    <style>
-        /* Estilo personalizado para los carruseles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #f9f6f1; /* Fondo blanco-dorado */
-            color: #DAA520; /* Texto dorado */
-            overflow-x: hidden;
-            animation: fadeIn 1s ease-in-out; /* Animación al cargar */
-        }
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f9f6f1; /* Fondo blanco-dorado */
+      color: #DAA520; /* Texto dorado para el contenido */
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        .title {
-            text-align: center;
-            padding: 20px;
-            font-size: 36px;
-            color: #DAA520;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .title {
+      text-align: center;
+      padding: 20px;
+      font-size: 36px;
+      color: #DAA520;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .description {
-            text-align: center;
-            margin: 0 20px 20px;
-            font-size: 18px;
-            line-height: 1.5;
-            color: #8b6f3f; /* Dorado más suave */
-        }
+    .description {
+      text-align: center;
+      margin: 0 20px 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #8b6f3f;
+    }
 
-        .carousel-container {
-            position: relative;
-            margin: 20px auto;
-            overflow: hidden;
-            width: 90%; /* Ancho adaptativo */
-            border-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        }
+    /* Carruseles */
+    .carousel-container {
+      position: relative;
+      margin: 20px auto;
+      overflow: hidden;
+      width: 90%;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-        .carousel-item {
-            min-width: 300px;
-            height: 200px;
-            flex-shrink: 0;
-            overflow: hidden;
-            margin-right: 15px;
-            transform: scale(1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .carousel-item {
+      min-width: 300px;
+      height: 200px;
+      flex-shrink: 0;
+      overflow: hidden;
+      margin-right: 15px;
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .carousel-item:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Efecto sombra */
-        }
+    .carousel-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .small-carousel .carousel-item {
-            min-width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Imágenes circulares */
-        }
+    .small-carousel .carousel-item {
+      min-width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
 
-        .small-carousel .carousel-item img {
-            border-radius: 50%;
-        }
+    .small-carousel .carousel-item img {
+      border-radius: 50%;
+    }
 
-        .button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #DAA520;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-            z-index: 10;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
+    .button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #DAA520;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 10;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-        .button:hover {
-            background-color: #b38b1d; /* Dorado más oscuro */
-        }
+    .button:hover {
+      background-color: #b38b1d;
+    }
 
-        .button-left {
-            left: 10px;
-        }
+    .button-left {
+      left: 10px;
+    }
 
-        .button-right {
-            right: 10px;
-        }
+    .button-right {
+      right: 10px;
+    }
 
-        .carousel-title {
-            margin-top: 10px;
-            text-align: center;
-            font-size: 22px;
-            color: #8b6f3f;
-            text-transform: uppercase;
-        }
-    </style>
+    .carousel-title {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 22px;
+      color: #8b6f3f;
+      text-transform: uppercase;
+    }
+
+    /* Estilos para el header y menú */
+    .header {
+      background-color: #f5c518; /* Fondo dorado */
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .nav__data {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff; /* Texto en blanco para contraste */
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav__logo img {
+      margin-right: 10px;
+    }
+
+    .nav__toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .nav__menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #fff; /* Texto en blanco */
+      font-size: 16px;
+    }
+
+    .dropdown__item {
+      position: relative;
+    }
+
+    .dropdown__menu {
+      display: none;
+      position: absolute;
+      background-color: #DAA520;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      z-index: 50;
+    }
+
+    .dropdown__item:hover .dropdown__menu {
+      display: block;
+    }
+
+    .dropdown__link {
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Responsive: ocultar menú en móviles por defecto */
+    @media (max-width: 768px) {
+      .nav__menu {
+        display: none; /* Oculto inicialmente */
+        flex-direction: column;
+        gap: 10px;
+      }
+      .nav__menu.show-menu {
+        display: block; /* Se muestra al agregar la clase */
+      }
+      .nav__toggle {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header de tu página original -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__data">
-                <a href="#" class="nav__logo">
-                    <img src="logo.png" width="90" height="90"> Minerva
-                </a>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav__burger"></i>
-                    <i class="ri-close-line nav__close"></i>
+  <!-- Header y navegación -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="#" class="nav__logo">
+          <img src="logo.png" width="90" height="90" alt="Logo"> Minerva
+        </a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="categorias.html" class="nav__link">Categoría</a></li>
+          <li><a href="cursos.html" class="nav__link">Cursos</a></li>
+          <li class="dropdown__item">
+            <div class="nav__link">
+              Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <ul class="dropdown__menu">
+              <li><a href="menudecompras.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Menú de Compras</a></li>
+              <li><a href="transacciones.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> Transacciones</a></li>
+              <li class="dropdown__subitem">
+                <div class="dropdown__link">
+                  <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas</a>
                 </div>
+              </li>
+            </ul>
+          </li>
+          <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
+          <li class="dropdown__item">
+            <div class="nav__link">
+              Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
             </div>
+            <ul class="dropdown__menu">
+              <li><a href="miperfil.html" class="dropdown__link"><i class="ri-user-line"></i> Mi perfil</a></li>
+              <li><a href="micuenta.html" class="dropdown__link"><i class="ri-lock-line"></i> Mi cuenta</a></li>
+              <li><a href="mensages.html" class="dropdown__link"><i class="ri-message-3-line"></i> Mensajes</a></li>
+              <li><a href="configuraciones.html" class="dropdown__link"><i class="ri-tools-line"></i> Configuraciones</a></li>
+            </ul>
+          </li>
+          <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li><a href="categorias.html" class="nav__link">Categoria</a></li>
-                    <li><a href="cursos.html" class="nav__link">Cursos</a></li>
-                    <li class="dropdown__item">
-                        <div class="nav__link">
-                            Compras <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </div>
-                        <ul class="dropdown__menu">
-                            <li><a href="menudecompras.html" class="dropdown__link"><i class="ri-pie-chart-line"></i> Menu de Compras</a></li>
-                            <li><a href="transacciones.html" class="dropdown__link"><i class="ri-arrow-up-down-line"></i> Transacciones</a></li>
-                            <li class="dropdown__subitem">
-                                <div class="dropdown__link">
-                                    <a href="factura.html"><i class="ri-bar-chart-line"></i> Facturas</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="notificaciones.html" class="nav__link">Notificaciones</a></li>
-                    <li class="dropdown__item">
-                        <div class="nav__link">
-                            Perfil <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </div>
-                        <ul class="dropdown__menu">
-                            <li><a href="miperfil.html" class="dropdown__link"><i class="ri-user-line"></i> Mi perfil</a></li>
-                            <li><a href="micuenta.html" class="dropdown__link"><i class="ri-lock-line"></i> Mi cuenta</a></li>
-                            <li><a href="mensages.html" class="dropdown__link"><i class="ri-message-3-line"></i> Mensages</a></li>
-                            <li><a href="configuraciones.html" class="dropdown__link"><i class="ri-tools-line"></i> Configuraciones</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="ayuda.html" class="nav__link">Ayuda</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Carruseles -->
+  <!-- Contenido: Carruseles -->
+  <main>
     <h1 class="title">Cursos en Línea</h1>
     <p class="description">
-        Bienvenido a Minerva, tu plataforma de aprendizaje en línea. Descubre cursos únicos diseñados para llevarte al siguiente nivel.
+      Bienvenido a Minerva, tu plataforma de aprendizaje en línea. Descubre cursos únicos diseñados para llevarte al siguiente nivel.
     </p>
 
     <h2 class="carousel-title">Carrusel Principal</h2>
     <div class="carousel-container">
-        <button class="button button-left" onclick="scrollCarousel(-1, 0)">&#8249;</button>
-        <div id="carousel0" class="carousel main-carousel">
-            <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
-        </div>
-        <button class="button button-right" onclick="scrollCarousel(1, 0)">&#8250;</button>
+      <button class="button button-left" onclick="scrollCarousel(-1, 0)">&#8249;</button>
+      <div id="carousel0" class="carousel main-carousel">
+        <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img1.avif" alt="Curso 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img2.jpg" alt="Curso 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img3.jpg" alt="Curso 3"></div>
+      </div>
+      <button class="button button-right" onclick="scrollCarousel(1, 0)">&#8250;</button>
     </div>
 
     <h2 class="carousel-title">Categoría 1</h2>
     <div class="carousel-container">
-        <button class="button button-left" onclick="scrollCarousel(-1, 1)">&#8249;</button>
-        <div id="carousel1" class="carousel small-carousel">
-            <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
-        </div>
-        <button class="button button-right" onclick="scrollCarousel(1, 1)">&#8250;</button>
+      <button class="button button-left" onclick="scrollCarousel(-1, 1)">&#8249;</button>
+      <div id="carousel1" class="carousel small-carousel">
+        <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img4.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img5.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img6.jpg" alt="Pequeña 3"></div>
+      </div>
+      <button class="button button-right" onclick="scrollCarousel(1, 1)">&#8250;</button>
     </div>
 
     <h2 class="carousel-title">Categoría 2</h2>
     <div class="carousel-container">
-        <button class="button button-left" onclick="scrollCarousel(-1, 2)">&#8249;</button>
-        <div id="carousel2" class="carousel small-carousel">
-            <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
-            <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
-        </div>
-        <button class="button button-right" onclick="scrollCarousel(1, 2)">&#8250;</button>
+      <button class="button button-left" onclick="scrollCarousel(-1, 2)">&#8249;</button>
+      <div id="carousel2" class="carousel small-carousel">
+        <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img7.jpg" alt="Pequeña 1"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img8.jpg" alt="Pequeña 2"></div>
+        <div class="carousel-item"><img src="imagenescarrusel/img9.jpg" alt="Pequeña 3"></div>
+      </div>
+      <button class="button button-right" onclick="scrollCarousel(1, 2)">&#8250;</button>
     </div>
+  </main>
 
-    <script>
-        let currentIndex = [0, 0, 0]; // Índices para cada carrusel
+  <!-- Scripts -->
+  <script>
+    // Toggle del menú en móviles
+    document.addEventListener("DOMContentLoaded", () => {
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
 
-        function scrollCarousel(direction, carouselId) {
-            const carousel = document.getElementById(`carousel${carouselId}`);
-            const items = carousel.children;
-            const maxIndex = items.length - 1;
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("show-menu");
+        });
+      }
+    });
 
-            // Actualizar índice actual
-            currentIndex[carouselId] += direction;
-            if (currentIndex[carouselId] < 0) currentIndex[carouselId] = maxIndex; // Ciclo hacia atrás
-            if (currentIndex[carouselId] > maxIndex) currentIndex[carouselId] = 0; // Ciclo hacia adelante
+    // Función para el carrusel
+    let currentIndex = [0, 0, 0]; // Índices para cada carrusel
 
-            // Calcular desplazamiento
-            const itemWidth = items[0].offsetWidth + 15; // Ancho del elemento + margen
-            const newTransform = -currentIndex[carouselId] * itemWidth;
+    function scrollCarousel(direction, carouselId) {
+      const carousel = document.getElementById(`carousel${carouselId}`);
+      const items = carousel.children;
+      const maxIndex = items.length - 1;
 
-            // Desplazar carrusel
-            carousel.style.transform = `translateX(${newTransform}px)`;
-        }
-    </script>
+      // Actualizar el índice actual
+      currentIndex[carouselId] += direction;
+      if (currentIndex[carouselId] < 0) currentIndex[carouselId] = maxIndex;
+      if (currentIndex[carouselId] > maxIndex) currentIndex[carouselId] = 0;
+      
+      // Calcular el desplazamiento (ancho del elemento + margen)
+      const itemWidth = items[0].offsetWidth + 15;
+      const newTransform = -currentIndex[carouselId] * itemWidth;
+      
+      // Aplicar la transformación al carrusel
+      carousel.style.transform = `translateX(${newTransform}px)`;
+    }
+  </script>
 </body>
 </html>
